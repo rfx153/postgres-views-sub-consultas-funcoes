@@ -28,5 +28,12 @@ GROUP BY 1
 ORDER BY numero_alunos DESC
 LIMIT 1;
 
+-- vamos fazer o aluno que faz mais cursos
 
+Select aluno.primeiro_nome, aluno.ultimo_nome, 
+	count(aluno_curso.aluno_id) as numero_de_cursos
+	from aluno
+	join aluno_curso on aluno_curso.aluno_id = aluno.id
+	GROUP BY 1,2
+	ORDER BY numero_de_cursos DESC;
 
