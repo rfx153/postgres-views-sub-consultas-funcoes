@@ -1,3 +1,4 @@
+--BANCO INICIAL PARA RESTAURAR OS ARQUIVOS DESDE O INÍCIO
 CREATE DATABASE alura;
 
 CREATE TABLE aluno (
@@ -17,6 +18,7 @@ CREATE TABLE curso (
 	nome VARCHAR(255) NOT NULL,
 	categoria_id INTEGER NOT NULL REFERENCES categoria(id)
 );
+
 
 CREATE TABLE aluno_curso (
 	aluno_id INTEGER NOT NULL REFERENCES aluno(id),
