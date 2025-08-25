@@ -37,3 +37,8 @@ Select aluno.primeiro_nome, aluno.ultimo_nome,
 	GROUP BY 1,2
 	ORDER BY numero_de_cursos DESC;
 
+--BRICANDO UM POUCO COM A BASE DE DADOS 
+select * from categoria;
+select * from categoria WHERE nome like 'F%' && 'B%';
+
+
