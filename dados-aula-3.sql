@@ -33,6 +33,16 @@ select categoria,
 	    COUNT(curso.id) as numero_cursos
 	    FROM categoria
 	    JOIN curso ON curso.categoria_id = categoria.id
-		GROUP BY categoria;		
+		GROUP BY categoria		
 	) as categoria_cursos
-	where numer_cursos > 3;
+	where numero_cursos > 3;
+
+
+
+ SELECT curso.nome,
+         COUNT(aluno_curso.aluno_id) numero_alunos
+    FROM curso
+    JOIN aluno_curso ON aluno_curso.curso_id = curso.id
+	GROUP BY 1
+     HAVING COUNT(aluno_curso.aluno_id) > 2
+	ORDER BY numero_alunos DESC;
